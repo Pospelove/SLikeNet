@@ -87,3 +87,7 @@ set(SLIKENET_COMMON_LIBS SLikeNetLibStatic)
 if(SLIKENET_ENABLE_SAMPLES)
 	add_subdirectory(Samples)
 endif()
+
+add_compile_definitions(__linux__=1)
+add_compile_definitions(__unix__=1)
+
