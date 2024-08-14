@@ -182,7 +182,7 @@ SLNet::TimeUS GetTimeUS_Windows( void )
 	return curTime;
 #endif // #if defined(GET_TIME_SPIKE_LIMIT) && GET_TIME_SPIKE_LIMIT>0
 }
-#elif defined(__GNUC__)  || defined(__GCCXML__) || defined(__S3E__)
+#elif defined(__EMSCRIPTEN__) || defined(__GNUC__)  || defined(__GCCXML__) || defined(__S3E__)
 SLNet::TimeUS GetTimeUS_Linux( void )
 {
 	timeval tp;

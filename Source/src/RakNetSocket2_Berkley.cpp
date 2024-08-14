@@ -203,7 +203,7 @@ RNS2BindResult RNS2_Berkley::BindSharedIPV4( RNS2_BerkleyBindParameters *bindPar
 #if defined(_WIN32)
 		closesocket__(rns2Socket);
 		return BR_FAILED_TO_BIND_SOCKET;
-#elif (defined(__GNUC__) || defined(__GCCXML__) ) && !defined(_WIN32)
+#elif (defined(__EMSCRIPTEN__) || defined(__GNUC__) || defined(__GCCXML__) ) && !defined(_WIN32)
 		closesocket__(rns2Socket);
 		switch (errno)
 		{

@@ -44,7 +44,7 @@
 #include "slikenet/Itoa.h"
 #include "slikenet/SocketLayer.h"
 #include "slikenet/SocketDefines.h"
-#if (defined(__GNUC__)  || defined(__GCCXML__)) && !defined(__WIN32__)
+#if (defined(__EMSCRIPTEN__) || defined(__GNUC__)  || defined(__GCCXML__)) && !defined(__WIN32__)
 #include <netdb.h>
 #endif
 

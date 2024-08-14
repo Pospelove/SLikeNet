@@ -12,7 +12,7 @@
 * Original file by the_viking, fixed by Rv¥mulo Fernandes, fixed by Emmanuel Nars
 * Should emulate windows finddata structure
 */
-#if (defined(__GNUC__)  || defined(__GCCXML__)) && !defined(_WIN32)
+#if (defined(__EMSCRIPTEN__) || defined(__GNUC__)  || defined(__GCCXML__)) && !defined(_WIN32)
 #include "slikenet/_FindFirst.h"
 #include "slikenet/DS_List.h"
 

@@ -17,7 +17,7 @@
 #include "slikenet/assert.h"
 #include "slikenet/sleep.h"
 
-#if defined(__GNUC__) 
+#if defined(__GNUC__) || defined(__EMSCRIPTEN__)
 #include <sys/time.h>
 #include <unistd.h>
 #endif

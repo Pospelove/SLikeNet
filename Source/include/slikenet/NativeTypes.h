@@ -16,7 +16,7 @@
 #ifndef __NATIVE_TYPES_H
 #define __NATIVE_TYPES_H
 
-#if defined(__GNUC__) || defined(__GCCXML__) || defined(__SNC__) || defined(__S3E__)
+#if defined(__EMSCRIPTEN__) || defined(__GNUC__) || defined(__GCCXML__) || defined(__SNC__) || defined(__S3E__)
 #include <stdint.h>
 #elif !defined(_STDINT_H) && !defined(_SN_STDINT_H) && !defined(_SYS_STDINT_H_) && !defined(_STDINT) && !defined(_MACHTYPES_H_) && !defined(_STDINT_H_)
 	typedef unsigned char       uint8_t;

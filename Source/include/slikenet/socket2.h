@@ -354,7 +354,7 @@ protected:
 
 
 
-#if defined(_WIN32) || defined(__GNUC__)  || defined(__GCCXML__) || defined(__S3E__)
+#if defined(_WIN32) || defined(__EMSCRIPTEN__) || defined(__GNUC__)  || defined(__GCCXML__) || defined(__S3E__)
 class RNS2_Windows_Linux_360
 {
 public:

@@ -212,7 +212,7 @@ void UDPForwarder::RecvFrom(SLNet::TimeMS curTime, ForwardEntry *forwardEntry)
 	sockAddrIn.sin_family = AF_INET;
 #endif
 
-#if defined(__GNUC__)
+#if defined(__GNUC__) || defined(__EMSCRIPTEN__)
 	#if defined(MSG_DONTWAIT)
 		const int flag=MSG_DONTWAIT;
 	#else

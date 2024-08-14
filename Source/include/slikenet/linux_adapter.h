@@ -9,7 +9,7 @@
  */
 #pragma once
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__EMSCRIPTEN__)
 #define _TRUNCATE ((size_t)-1)
 typedef int errno_t;
 

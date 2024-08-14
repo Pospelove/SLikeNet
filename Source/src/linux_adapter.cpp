@@ -8,7 +8,7 @@
  *  This file defines adapters for all MS-specific functions used throughout SLikeNet.
  */
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__EMSCRIPTEN__)
 #include "slikenet/linux_adapter.h"
 
 #include <algorithm>	// for std::max, std::min

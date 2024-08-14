@@ -26,7 +26,7 @@
 #include "slikenet/SocketDefines.h"
 #include "slikenet/linux_adapter.h"
 #include "slikenet/osx_adapter.h"
-#if (defined(__GNUC__)  || defined(__GCCXML__)) && !defined(__WIN32__)
+#if (defined(__EMSCRIPTEN__) || defined(__GNUC__)  || defined(__GCCXML__)) && !defined(__WIN32__)
 #include <netdb.h>
 #endif
 
